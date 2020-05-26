@@ -1,0 +1,15 @@
+FROM ubuntu:18.04
+#Setup Environment
+ENV BOTFileName index.js
+VOLUME ["/mnt/bot"]
+WORKDIR /mnt/bot
+
+#Install Deps
+RUN apt-get update && apt-get -y install sudo
+RUN sudo apt install -y nodejs 
+RUN sudo apt update
+
+RUN echo "Installed Dependancies"
+
+#Run Bot
+CMD node ${BOTFileName}
