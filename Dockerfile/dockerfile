@@ -7,7 +7,7 @@ WORKDIR /mnt/bot
 #Install Deps
 RUN apt-get update && apt-get -y install sudo
 RUN sudo apt-get install -y software-properties-common
-RUN sudo apt-add-repository ppa:chris-lea/node.js-legacy
+RUN sudo apt-add-repository -y ppa:chris-lea/node.js-legacy
 RUN sudo apt-get update 
 RUN sudo apt-get install -y nodejs
 RUN sudo apt update
