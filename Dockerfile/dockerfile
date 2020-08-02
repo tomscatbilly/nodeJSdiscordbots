@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM ubuntu:20.04
 #Setup Environment
 ENV BOTFileName index.js
 VOLUME ["/mnt/bot"]
@@ -6,9 +6,6 @@ WORKDIR /mnt/bot
 
 #Install Deps
 RUN apt-get update && apt-get -y install sudo
-RUN sudo apt-get install -y software-properties-common
-RUN sudo apt-add-repository -y ppa:chris-lea/node.js-legacy
-RUN sudo apt-get update 
 RUN sudo apt-get install -y nodejs
 RUN sudo apt update
 
